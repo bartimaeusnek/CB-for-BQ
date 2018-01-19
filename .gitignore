@@ -1,3 +1,12 @@
+.git/
+.gradle/
+.settings/
+build/
+bin/
+eclipse/
+.classpath
+.project
+
 # Compiled class file
 *.class
 
