@@ -1,23 +1,16 @@
-package lokko12.CB4BQ;
-
-import org.apache.logging.log4j.LogManager;
+package com.github.bartimaeusnek.CB4BQ;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
-import lokko12.croploadcore.config;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
+import org.apache.logging.log4j.LogManager;
 
 @Mod(
 		modid = "cb4bq", name = "Command Blocks for Better Questing", version = "1",
-		dependencies = "required-after:betterquesting"
+		dependencies = "required-after:betterquesting", acceptableRemoteVersions = "*"
 		)
 
 
@@ -30,10 +23,10 @@ public class CB4BQ {
 
 	public static final org.apache.logging.log4j.Logger CLClogger = LogManager.getLogger("cb4bq");
 	
-	@Instance(value = "CropLoadCore")
+	@Instance(value = "cb4bq")
 	public static CB4BQ instance;
 	
-	@SidedProxy(clientSide="lokko12.CB4BQ.CommonProxy",serverSide="lokko12.CB4BQ.ServerProxy")
+	@SidedProxy(clientSide="com.bartimaeusnek.CB4BQ.CommonProxy",serverSide="com.bartimaeusnek.CB4BQ.ServerProxy")
 	public static ServerProxy proxy;
 	
 	@EventHandler
