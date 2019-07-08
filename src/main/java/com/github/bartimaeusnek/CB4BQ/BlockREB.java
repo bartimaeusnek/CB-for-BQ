@@ -15,6 +15,6 @@ extends BlockCommandBlock {
     }
     
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
-		return Util.executeCommand(world, player, "reset", "all");
+		return Util.executeCommand(world, player, "reset", "all", player.getUniqueID().toString());
 	}
 }

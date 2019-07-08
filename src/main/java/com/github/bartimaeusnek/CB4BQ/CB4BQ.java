@@ -26,7 +26,7 @@ public class CB4BQ {
 	@Instance(value = "cb4bq")
 	public static CB4BQ instance;
 	
-	@SidedProxy(clientSide="com.bartimaeusnek.CB4BQ.CommonProxy",serverSide="com.bartimaeusnek.CB4BQ.ServerProxy")
+	@SidedProxy(clientSide="com.github.bartimaeusnek.CB4BQ.CommonProxy",serverSide="com.github.bartimaeusnek.CB4BQ.ServerProxy")
 	public static ServerProxy proxy;
 	
 	@EventHandler
